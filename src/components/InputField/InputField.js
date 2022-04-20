@@ -65,8 +65,6 @@ export const InputField = ({
 
 const styles = StyleSheet.create({
   input: {
-    borderColor: '#C4C4C4',
-    borderWidth: 1,
     height: 58,
     paddingHorizontal: 10,
     borderRadius: 10,
@@ -83,7 +81,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   inputStyle: {
-    width: '95%',
+    width: '100%',
     // marginTop: Platform.OS === 'ios' ? 15 : 1,
     marginLeft: 6,
     fontSize: 15,
