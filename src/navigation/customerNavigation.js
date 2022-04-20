@@ -1,6 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import CustomerLogin from '../screens/Customer/Auth/CustomerLogin/CustomerLogin'
+import CustomerLogin from '../screens/Customer/Auth/CustomerLogin/customerLogin.js'
 const CustomerAuthStack = createStackNavigator()
 const BusinessApp = createStackNavigator()
 
