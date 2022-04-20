@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/Ionicons'
-
+import {CustomerAuth} from './customerNavigation'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -18,8 +18,10 @@ function AuthStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Profile">
+      initialRouteName="CustomerAuth">
       <AuthStack.Screen name="Profile" component={Profile} />
+      {/* <AuthStack.Screen name="Profile" component={Profile} /> */}
+      <AuthStack.Screen name="CustomerAuth" component={CustomerAuth} />
     </AuthStack.Navigator>
   );
 }
