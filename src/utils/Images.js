@@ -18,11 +18,9 @@ const Images = {
       eyeicon: require('../assets/images/eyeicon.png'),
       eye: require('../assets/images/eye.png'),
       question: require('../assets/images/question.png'),
-      filter:require('../assets/images/filter.png')
+      filter:require('../assets/images/filter.png'),
+      dummy: require('../assets/images/dummy.png'),
+      orangePlus: require('../assets/images/orangePlus.png'),
     }
-
- 
-  
-
 }
 export { Images }

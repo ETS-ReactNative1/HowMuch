@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
   ScrollView,
   Platform,
-  Image
+  Image,
+  
 } from 'react-native'
 
 import { Button } from '../../../../components/Button/Button'
@@ -38,10 +39,7 @@ const CustomerFeeds = ({ navigation }) => {
               <Text>36 Guild Street London, UK</Text>
             </View>
             <View style={{flexDirection:"row"}}>
-            <InputField 
-            inputStyle={styles.inputStyle}
-            placeholder="Search"
-            />
+       
             <Image source={Images.Pictures.filter}/>
             </View>
          <CustomerTabBar navigation={navigation} active="Feeds" />
@@ -65,7 +63,6 @@ const CustomerFeeds = ({ navigation }) => {
     inputStyle:{
       borderWidth:1,
       borderColor:"#00000010",
-      width:"70%"
     }
   })
   
