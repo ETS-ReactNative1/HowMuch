@@ -21,6 +21,9 @@ const Images = {
       filter:require('../assets/images/filter.png'),
       dummy: require('../assets/images/dummy.png'),
       orangePlus: require('../assets/images/orangePlus.png'),
+      location: require('../assets/images/location.png'),
+      girl: require('../assets/images/girl.png'),
+      services: require('../assets/images/services.png'),
     }
 }
 export { Images }
