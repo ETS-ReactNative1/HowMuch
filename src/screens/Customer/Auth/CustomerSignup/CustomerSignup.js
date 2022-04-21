@@ -11,18 +11,18 @@ import {
 } from 'react-native'
 import { InputField } from '../../../../components/InputField/InputField'
 import { Button } from '../../../../components/Button/Button'
-import { useMutation, useQuery } from '@apollo/client'
-import { SignInAction } from '../../../../stores/actions/user.action'
-import { useDispatch } from 'react-redux'
 import { Header } from '../../../../components/Header/Header'
 import { Images } from '../../../../utils/Images'
-import {} from '../../../../components/Button/Button'
 
-const CustomerLogin = ({ navigation }) => {
+const CustomerSignup = ({ navigation }) => {
   const [email, setEmail] = useState('')
+  const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('1234567890')
+  const [cpassword, setCPassword] = useState('1234567890')
+  const [city, setCity] = useState('New York')
+  const [country, setCountry] = useState('USA')
   const [toggleIcon, setToggleIcon] = useState(true)
-
+  const [toggleIconc, setToggleIconc] = useState(true)
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
@@ -32,9 +32,20 @@ const CustomerLogin = ({ navigation }) => {
           container={{ marginTop: Platform.OS == 'ios' ? 30 : 10 }}
         />
         <View>
-          <Text style={styles.loginText}>Login</Text>
+          <Text style={styles.loginText}>Sign up</Text>
+        </View>
+        <View>
+          <Text>IMgae</Text>
         </View>
         <View style={styles.feildsView}>
+          <View>
+            <Text style={styles.feildsText}>User Name</Text>
+            <InputField
+              onChange={text => setUserName(text)}
+              value={userName}
+              placeholder={'Jorden'}
+            />
+          </View>
           <View>
             <Text style={styles.feildsText}>Email Address</Text>
             <InputField
@@ -55,12 +66,33 @@ const CustomerLogin = ({ navigation }) => {
               }
             />
           </View>
+          <View>
+            <Text style={styles.feildsText}>Confirm Password </Text>
+            <InputField
+              onChange={text => setCPassword(text)}
+              onPress={() => setToggleIconc(!toggleIconc)}
+              value={cpassword}
+              secureTextEntry={toggleIconc}
+              eyeIcon={
+                toggleIconc ? Images.Pictures.eyeicon : Images.Pictures.eye
+              }
+            />
+          </View>
+          <View style={styles.bottmView}>
+            <View style={styles.bottmViewinner}>
+              <Text style={styles.feildsText}>City</Text>
+              <InputField onChange={text => setsetCity(text)} value={city} />
+            </View>
+            <View style={styles.bottmViewinnerTwo}>
+              <Text style={styles.feildsText}>Country</Text>
+              <InputField onChange={text => setCountry(text)} value={country} />
+            </View>
+          </View>
         </View>
         <View style={styles.btnView}>
-          <Button 
-           onPress={() => navigation.navigate('CoustomerGetStarted')} 
-           title="Login" />
+          <Button title="Sign In" />
         </View>
+
         <View style={styles.bottomBtnView}>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -69,8 +101,8 @@ const CustomerLogin = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => navigation.navigate('CustomerSignup')}>
-            <Text style={styles.Sign}>Sign Up</Text>
+            onPress={() => navigation.navigate('CustomerLogin')}>
+            <Text style={styles.Sign}>Sign In</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -78,7 +110,7 @@ const CustomerLogin = ({ navigation }) => {
   )
 }
 
-export default CustomerLogin
+export default CustomerSignup
 
 const styles = StyleSheet.create({
   container: {
@@ -89,7 +121,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     lineHeight: 30,
     marginLeft: 25,
-    marginTop: 100
+    marginTop: 40
   },
   feildsView: {
     width: '90%',
@@ -102,14 +134,22 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 20
   },
-  btnView: {
-    marginTop: 70
+  bottmView: {
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  bottmViewinner: {
+    width: '45%'
+  },
+  bottmViewinnerTwo: {
+    width: '45%'
+    // marginLeft: 30
   },
   bottomBtnView: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     margin: 38,
-    marginTop: 80
+    marginTop: 50
   },
   Forgot: {
     fontWeight: '500',
@@ -121,5 +161,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 18,
     color: '#3669C9'
+  },
+  btnView: {
+    marginTop: 40
   }
 })

@@ -15,7 +15,14 @@ const Images = {
       measage:require('../assets/images/measageIcon.png'),
       profile:require('../assets/images/profileIcon.png'),
       category:require('../assets/images/category.png'),
+      eyeicon: require('../assets/images/eyeicon.png'),
+      eye: require('../assets/images/eye.png'),
+      question: require('../assets/images/question.png'),
+      filter:require('../assets/images/filter.png')
     }
-  }
-  export { Images }
+
+ 
   
+
+}
+export { Images }

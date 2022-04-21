@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {
-    View,
-    Text,
-    StyleSheet,
-    Image,
-    TextInput,
-    StatusBar,
-    TouchableOpacity,
-    Dimensions,
-    Platform,
-    Animated,
-    Easing
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  StatusBar,
+  TouchableOpacity,
+  Dimensions,
+  Platform,
+  Animated,
+  Easing
 } from 'react-native'
 import { Images } from '../../utils/Images'
 import { theme } from '../../utils/theme'
@@ -33,19 +33,18 @@ export const Button = ({
 }
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor:"#2E9BFF",
-        flexDirection: 'row',
-        alignItems: 'center',
-        width: 350,
-        height: 55,
-        justifyContent: 'center',
-        alignSelf:"center",
-        borderRadius:10
-
-    },
-    test:{
-        color:"#FFFFFF",
-        fontSize:14
-    }
+  container: {
+    backgroundColor: '#2E9BFF',
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: 350,
+    height: 55,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 10
+  },
+  test: {
+    color: '#FFFFFF',
+    fontSize: 14
+  }
 })

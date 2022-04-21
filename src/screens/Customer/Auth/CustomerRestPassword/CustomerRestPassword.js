@@ -18,10 +18,8 @@ import { Header } from '../../../../components/Header/Header'
 import { Images } from '../../../../utils/Images'
 import {} from '../../../../components/Button/Button'
 
-const CustomerLogin = ({ navigation }) => {
+const CustomerRestPassword = ({ navigation }) => {
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('1234567890')
-  const [toggleIcon, setToggleIcon] = useState(true)
 
   return (
     <>
@@ -32,7 +30,13 @@ const CustomerLogin = ({ navigation }) => {
           container={{ marginTop: Platform.OS == 'ios' ? 30 : 10 }}
         />
         <View>
-          <Text style={styles.loginText}>Login</Text>
+          <Text style={styles.loginText}>Reset Password</Text>
+        </View>
+        <View>
+          <Text style={styles.innerText}>
+            Kami telah mengirimkan kode verifikasi ke +628*******716{' '}
+            <Text style={styles.innerTextColor}>Ganti?</Text>
+          </Text>
         </View>
         <View style={styles.feildsView}>
           <View>
@@ -43,42 +47,16 @@ const CustomerLogin = ({ navigation }) => {
               placeholder={'matias@gmail.com'}
             />
           </View>
-          <View>
-            <Text style={styles.feildsText}>Password</Text>
-            <InputField
-              onChange={text => setPassword(text)}
-              onPress={() => setToggleIcon(!toggleIcon)}
-              value={password}
-              secureTextEntry={toggleIcon}
-              eyeIcon={
-                toggleIcon ? Images.Pictures.eyeicon : Images.Pictures.eye
-              }
-            />
-          </View>
         </View>
         <View style={styles.btnView}>
-          <Button 
-           onPress={() => navigation.navigate('CoustomerGetStarted')} 
-           title="Login" />
-        </View>
-        <View style={styles.bottomBtnView}>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={() => navigation.navigate('CustomerRestPassword')}>
-            <Text style={styles.Forgot}>Forgot Password</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={() => navigation.navigate('CustomerSignup')}>
-            <Text style={styles.Sign}>Sign Up</Text>
-          </TouchableOpacity>
+            <Button  onPress={() => navigation.navigate('CustomerOtp')} title="Reset" />
         </View>
       </ScrollView>
     </>
   )
 }
 
-export default CustomerLogin
+export default CustomerRestPassword
 
 const styles = StyleSheet.create({
   container: {
@@ -89,12 +67,12 @@ const styles = StyleSheet.create({
     fontSize: 25,
     lineHeight: 30,
     marginLeft: 25,
-    marginTop: 100
+    marginTop: 90
   },
   feildsView: {
     width: '90%',
     alignSelf: 'center',
-    marginTop: 60
+    marginTop: 20
   },
   feildsText: {
     marginBottom: 22,
@@ -120,6 +98,18 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 14,
     lineHeight: 18,
+    color: '#3669C9'
+  },
+  innerText: {
+    marginLeft: 25,
+    marginRight: 50,
+    marginTop: 10,
+    fontWeight: '400',
+    fontSize: 14,
+    color: '#838589',
+    lineHeight: 25
+  },
+  innerTextColor: {
     color: '#3669C9'
   }
 })

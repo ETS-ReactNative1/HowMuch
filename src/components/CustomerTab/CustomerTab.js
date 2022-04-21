@@ -15,37 +15,45 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
       name: 'home',
       icon: Images.Pictures.homeIcon,
       navigateTo: 'CustomerHome',
-      style: {}
+      style: {},
+      text:"Home"
     },
     {
       name: 'Feeds',
       icon: Images.Pictures.category,
       navigateTo: 'CustomerFeeds',
-      style: {}
+      style: {},
+      text:"Feeds"
     },
     {
       name: 'search',
       icon: Images.Pictures.plus,
       navigateTo: 'CustomerSearch',
-      style: {}
+      style: {
+        width:55,
+        height:55,
+        
+      }
     },
     {
       name: 'bookmark',
       icon: Images.Pictures.measage,
       navigateTo: 'CustomerBookmark',
       style: {
-        width: 16,
-        height: 20
-      }
+        width: 22,
+        height: 22
+      },
+      text:"Message"
     },
     {
       name: 'profile',
       icon: Images.Pictures.profile,
       navigateTo: 'CustomerProfile',
       style: {
-        width: 15,
-        height: 20,
-      }
+        width: 22,
+        height: 22,
+      },
+      text:"Profile"
     }
   ]
 
@@ -64,6 +72,7 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
                 source={item.icon}
                 style={[styles.iconStyle, item.style]}
               />
+                 <Text >{item.text}</Text>
             </TouchableOpacity>
           )
         } else {
@@ -78,6 +87,7 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
                 source={item.icon}
                 style={[styles.iconStyle, item.style]}
               />
+              <Text style={styles.text}>{item.text}</Text>
               <Image
                 source={Images.Pictures.ActiveTab}
                 style={{ height: 10, width: 30 }}
@@ -94,11 +104,11 @@ const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
     width: width,
-    height:60,
+    height:70,
     backgroundColor:"#ffffff",
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems:"center",
+    justifyContent: "space-evenly",
+    // alignItems:"center",
     bottom: 0,
     position: 'absolute'
   },
@@ -106,5 +116,8 @@ const styles = StyleSheet.create({
     height: 22,
     width: 22,
     marginVertical: 15
+  },
+  text:{
+    color:"#0888FF"
   }
 })

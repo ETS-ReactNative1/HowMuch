@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {
-    View,
-    Text,
-    StyleSheet,
-    Image,
-    TextInput,
-    StatusBar,
-    TouchableOpacity,
-    Dimensions,
-    Platform,
-    Animated,
-    Easing
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  StatusBar,
+  TouchableOpacity,
+  Dimensions,
+  Platform,
+  Animated,
+  Easing
 } from 'react-native'
 import { Images } from '../../utils/Images'
 import { theme } from '../../utils/theme'
