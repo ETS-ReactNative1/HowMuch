@@ -57,7 +57,9 @@ const CustomerLogin = ({ navigation }) => {
           </View>
         </View>
         <View style={styles.btnView}>
-          <Button title="Login" />
+          <Button 
+           onPress={() => navigation.navigate('CoustomerGetStarted')} 
+           title="Login" />
         </View>
         <View style={styles.bottomBtnView}>
           <TouchableOpacity
