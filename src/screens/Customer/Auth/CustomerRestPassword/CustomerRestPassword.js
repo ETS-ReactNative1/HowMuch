@@ -49,11 +49,7 @@ const CustomerRestPassword = ({ navigation }) => {
           </View>
         </View>
         <View style={styles.btnView}>
-          <TouchableOpacity
-            activeOpacity={0.9}
-            onPress={() => navigation.navigate('CustomerOtp')}>
-            <Button title="Reset" />
-          </TouchableOpacity>
+            <Button  onPress={() => navigation.navigate('CustomerOtp')} title="Reset" />
         </View>
       </ScrollView>
     </>

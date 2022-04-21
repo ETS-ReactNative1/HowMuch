@@ -1,12 +1,15 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import CustomerLogin from '../screens/Customer/Auth/CustomerLogin/customerLogin'
+import CustomerLogin from '../screens/Customer/Auth/CustomerLogin/CustomerLogin'
+import CoustomerGetStarted from '../screens/Customer/Auth/CustomerLogin/CustomerGetStarted'
+import CustomerHome from '../screens/Customer/CustomerHome/CustomerHome'
+import CustomerFeeds from '../screens/Customer/CustomerFeeds/CustomerFeeds'
 import CustomerSignup from '../screens/Customer/Auth/CustomerSignup/CustomerSignup'
 import CustomerRestPassword from '../screens/Customer/Auth/CustomerRestPassword/CustomerRestPassword'
 import CustomerOtp from '../screens/Customer/Auth/CustomerOtp/CustomerOtp'
 import CustomerUpdatePassword from '../screens/Customer/Auth/CustomerUpdatePassword/CustomerUpdatePassword'
 const CustomerAuthStack = createStackNavigator()
-const BusinessApp = createStackNavigator()
+const CustomerApp = createStackNavigator()
 
 export function CustomerAuth() {
   return (
@@ -18,6 +21,10 @@ export function CustomerAuth() {
       <CustomerAuthStack.Screen
         name="CustomerLogin"
         component={CustomerLogin}
+      />
+         <CustomerAuthStack.Screen
+        name="CoustomerGetStarted"
+        component={CoustomerGetStarted}
       />
       <CustomerAuthStack.Screen
         name="CustomerSignup"
@@ -33,5 +40,27 @@ export function CustomerAuth() {
       />
       <CustomerAuthStack.Screen name="CustomerOtp" component={CustomerOtp} />
     </CustomerAuthStack.Navigator>
+  )
+}
+
+
+export function CustomeAppStack() {
+  return (
+    <CustomerApp.Navigator
+      detachInactiveScreens={false}
+      screenOptions={{
+        headerShown: false
+      }}
+      initialRouteName="CustomerHome">
+      <CustomerApp.Screen
+        name="CustomerHome"
+        component={CustomerHome}
+        // component={CustomerDrawerNavigator}
+      />
+          <CustomerApp.Screen
+        name="CustomerFeeds"
+        component={CustomerFeeds}
+      />
+    </CustomerApp.Navigator>
   )
 }
