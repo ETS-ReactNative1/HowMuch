@@ -8,6 +8,7 @@ import CustomerSignup from '../screens/Customer/Auth/CustomerSignup/CustomerSign
 import CustomerRestPassword from '../screens/Customer/Auth/CustomerRestPassword/CustomerRestPassword'
 import CustomerOtp from '../screens/Customer/Auth/CustomerOtp/CustomerOtp'
 import CustomerUpdatePassword from '../screens/Customer/Auth/CustomerUpdatePassword/CustomerUpdatePassword'
+import CustomerCreateProduct from '../screens/Customer/CustomerCreateProduct/CustomerCreateProduct'
 const CustomerAuthStack = createStackNavigator()
 const CustomerApp = createStackNavigator()
 
@@ -22,7 +23,7 @@ export function CustomerAuth() {
         name="CustomerLogin"
         component={CustomerLogin}
       />
-         <CustomerAuthStack.Screen
+      <CustomerAuthStack.Screen
         name="CoustomerGetStarted"
         component={CoustomerGetStarted}
       />
@@ -43,7 +44,6 @@ export function CustomerAuth() {
   )
 }
 
-
 export function CustomeAppStack() {
   return (
     <CustomerApp.Navigator
@@ -57,9 +57,10 @@ export function CustomeAppStack() {
         component={CustomerHome}
         // component={CustomerDrawerNavigator}
       />
-          <CustomerApp.Screen
-        name="CustomerFeeds"
-        component={CustomerFeeds}
+      <CustomerApp.Screen name="CustomerFeeds" component={CustomerFeeds} />
+      <CustomerApp.Screen
+        name="CustomerCreateProduct"
+        component={CustomerCreateProduct}
       />
     </CustomerApp.Navigator>
   )
