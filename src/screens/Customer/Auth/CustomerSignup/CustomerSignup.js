@@ -7,7 +7,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
-  Platform
+  Platform,
+  Image
 } from 'react-native'
 import { InputField } from '../../../../components/InputField/InputField'
 import { Button } from '../../../../components/Button/Button'
@@ -34,8 +35,14 @@ const CustomerSignup = ({ navigation }) => {
         <View>
           <Text style={styles.loginText}>Sign up</Text>
         </View>
-        <View>
-          <Text>IMgae</Text>
+        <View style={styles.imgView}>
+          <Image style={styles.logoImg} source={Images.Pictures.dummy} />
+          <TouchableOpacity activeOpacity={0.8}>
+            <Image style={styles.plusimg} source={Images.Pictures.orangePlus} />
+          </TouchableOpacity>
+          <View style={styles.bloewimgTextView}>
+            <Text style={styles.bloewimgText}>Add Profile Picture</Text>
+          </View>
         </View>
         <View style={styles.feildsView}>
           <View>
@@ -126,8 +133,9 @@ const styles = StyleSheet.create({
   feildsView: {
     width: '90%',
     alignSelf: 'center',
-    marginTop: 60
+    marginTop: 30
   },
+
   feildsText: {
     marginBottom: 22,
     fontWeight: '400',
@@ -164,5 +172,30 @@ const styles = StyleSheet.create({
   },
   btnView: {
     marginTop: 40
+  },
+  imgView: {
+    alignSelf: 'center',
+    marginTop: 30
+  },
+  plusimg: {
+    height: 40,
+    width: 40,
+    marginLeft: 90
+  },
+  logoImg: {
+    width: 140,
+    height: 140,
+    borderRadius: 150 / 2,
+    marginBottom: -50
+  },
+  bloewimgText: {
+    color: '#58677D',
+    opacity: 0.5,
+    fontWeight: '400',
+    fontSize: 13
+  },
+  bloewimgTextView: {
+    alignSelf: 'center',
+    marginTop: 20
   }
 })
