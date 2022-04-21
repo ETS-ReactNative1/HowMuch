@@ -18,15 +18,17 @@ const { width, height } = Dimensions.get('screen')
 import { useIsFocused, useNavigation } from '@react-navigation/native'
 
 export const Button = ({
-    onBackPress = {},
-    back = null,
     title = "",
-    containerStyle
+    containerStyle= {},
+    onPress  = () => { },
 }) => {
     return (
-        <View style={[styles.container,containerStyle]}>
+        <TouchableOpacity 
+        activeOpacity={0.9}
+        onPress={onPress}
+        style={[styles.container,containerStyle]}>
             <Text style={styles.test}>{title}</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 

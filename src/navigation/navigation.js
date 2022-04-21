@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/Ionicons'
 import {CustomerAuth} from './customerNavigation'
-
+import {CustomeAppStack} from './customerNavigation'
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
 const AppStack = createStackNavigator()
@@ -33,8 +33,8 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Home">
-      <AppStack.Screen name="Home" component={Home} />
+      initialRouteName="CustomeAppStack">
+      <AppStack.Screen name="CustomeAppStack" component={CustomeAppStack} />
     </AppStack.Navigator>
   )
 }
