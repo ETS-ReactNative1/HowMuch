@@ -24,6 +24,7 @@ const Images = {
       location: require('../assets/images/location.png'),
       girl: require('../assets/images/girl.png'),
       services: require('../assets/images/services.png'),
+      downarrow: require('../assets/images/downarrow.png'),
     }
 }
 export { Images }
