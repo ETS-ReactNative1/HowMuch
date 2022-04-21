@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     height: 58,
     paddingHorizontal: 10,
     borderRadius: 10,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    backgroundColor: '#FAFAFA'
   },
   logoImg: {
     // position: 'absolute',
