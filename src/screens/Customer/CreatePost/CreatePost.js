@@ -26,12 +26,6 @@ import { InputField } from '../../../components/InputField/InputField'
 import { Card } from '../../../components/Card/Card'
 const CreatePost = ({ navigation }) => {
     const[select,setSelect] = useState ("")
-    const card  = [
-      {},
-      {},
-      {},
-      {},
-    ]
     return (
       <>
         <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
@@ -47,6 +41,9 @@ const CreatePost = ({ navigation }) => {
                 <Image style={styles.girl} source={Images.Pictures.girl}/>
                 <Text style={styles.profileText}>Liza Ashlay</Text>
             </View>
+            <Card 
+            container={{width:"88%",alignSelf:"center"}}
+            />
         </View>
       </>
     )

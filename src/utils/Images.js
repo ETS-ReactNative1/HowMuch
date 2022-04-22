@@ -33,6 +33,10 @@ const Images = {
       construction :require('../assets/images/construction.png'),
       arrowLeft :require('../assets/images/arrowLeft.png'),
       dots :require('../assets/images/3dots.png'),
+      textarea: require('../assets/images/textarea.png'),
+      checkblue: require('../assets/images/checkblue.png'),
+      uncheck: require('../assets/images/uncheck.png')
     }
+
 }
 export { Images }

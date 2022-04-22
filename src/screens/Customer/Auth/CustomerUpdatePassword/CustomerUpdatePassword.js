@@ -27,6 +27,9 @@ const CustomerUpdatePassword = ({ navigation }) => {
       alert('Minimus 6 Character Allowed')
     } else if (password.length > 20 && cpassword.length > 20) {
       alert('Maximum 20 Character Allowed')
+    } else {
+      alert('Password Updated Successfully')
+      navigation.navigate('CustomerLogin')
     }
   }
   return (
@@ -74,9 +77,7 @@ const CustomerUpdatePassword = ({ navigation }) => {
           </View>
         </View>
         <View style={styles.btnView}>
-          <TouchableOpacity onPress={() => update()} activeOpacity={0.9}>
-            <Button title="Save Update" />
-          </TouchableOpacity>
+          <Button title="Save Update" onPress={() => update()} />
         </View>
       </ScrollView>
     </>

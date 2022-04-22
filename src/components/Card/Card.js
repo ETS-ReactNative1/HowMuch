@@ -24,13 +24,14 @@ export const Card = ({
     product = Images.Pictures.services,
     watch = "Apple Watch 2022",
     decription = "Praesent in posuere dui. In hac habitas plate",
-    decription1 = "ctumst. Morbi . View More..."
+    decription1 = "ctumst. Morbi . View More...",
+    container = {}
 }) => {
     return (
         <TouchableOpacity
             activeOpacity={0.9}
             onPress={onPress}
-            style={styles.container}
+            style={[styles.container,container]}
         >
             <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image style={{ width: 28, height: 28, resizeMode: "contain", marginLeft: 10 }} source={profileImg} />
