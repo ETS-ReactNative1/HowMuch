@@ -71,12 +71,12 @@ const CustomerOtp = ({ navigation }) => {
             {/* </Text> */}
           </View>
         </View>
-        <TouchableOpacity
-          activeOpacity={0.9}
-          onPress={() => navigation.navigate('CustomerUpdatePassword')}
-          style={styles.btnView}>
-          <Button title="Continue" />
-        </TouchableOpacity>
+        <View style={styles.btnView}>
+          <Button
+            title="Continue"
+            onPress={() => navigation.navigate('CustomerUpdatePassword')}
+          />
+        </View>
       </ScrollView>
     </>
   )
