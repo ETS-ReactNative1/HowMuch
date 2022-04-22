@@ -44,6 +44,12 @@ const Images = {
       girl1: require('../assets/images/girl1.png'),
       girl2: require('../assets/images/girl2.png'),
       girl3: require('../assets/images/girl3.png'),
+      imgss: require('../assets/images/imgss.png'),
+      box: require('../assets/images/box.png'),
+      car: require('../assets/images/car.png'),
+      boll: require('../assets/images/boll.png'),
+      music: require('../assets/images/music.png'),
+      rightArrow: require('../assets/images/rightArrow.png')
     }
 
 }
