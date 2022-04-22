@@ -27,7 +27,6 @@ const CustomerLogin = ({ navigation }) => {
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
       <ScrollView style={styles.container}>
-    
         <View>
           <Text style={styles.loginText}>Login</Text>
         </View>
@@ -54,9 +53,10 @@ const CustomerLogin = ({ navigation }) => {
           </View>
         </View>
         <View style={styles.btnView}>
-          <Button 
-           onPress={() => navigation.navigate('CoustomerGetStarted')} 
-           title="Login" />
+          <Button
+            onPress={() => navigation.navigate('CoustomerGetStarted')}
+            title="Login"
+          />
         </View>
         <View style={styles.bottomBtnView}>
           <TouchableOpacity
@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
     fontSize: 25,
     lineHeight: 30,
     marginLeft: 25,
-    marginTop: "10%"
+    marginTop: '10%'
   },
   feildsView: {
     width: '90%',
     alignSelf: 'center',
-    marginTop: 60
+    marginTop: '30%'
   },
   feildsText: {
     marginBottom: 22,
