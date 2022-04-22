@@ -63,7 +63,7 @@ const chatData = [
   }
 ]
 
-export default function CustomerSelectProduct({ navigation }) {
+export default function CustomerSelectCategory({ navigation }) {
   const [checked, setchecked] = useState()
 
   const checking = index => {

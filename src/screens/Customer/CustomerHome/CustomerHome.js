@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createRef } from 'react'
 import {
   SafeAreaView,
   View,
@@ -12,15 +12,25 @@ import {
 } from 'react-native'
 
 import { Button } from '../../../../components/Button/Button'
-import { useMutation, useQuery } from '@apollo/client'
-import { SignInAction } from '../../../../stores/actions/user.action'
-import { useDispatch } from 'react-redux'
 import { Header } from '../../../components/Header/Header'
+import { Modals } from '../../../components/Modal/Modals'
 import { Images } from '../../../utils/Images'
-import LinearGradient from 'react-native-linear-gradient'
 import { CustomerTabBar } from '../../../components/CustomerTab/CustomerTab'
+import ActionSheet, { SheetManager } from 'react-native-actions-sheet'
+
 const CustomerHome = ({ navigation }) => {
-  const [select, setSelect] = useState('')
+  const [select, setSelect] = useState(1)
+  const actionSheetRef = createRef()
+
+  const openSheet = () => {
+    setSelect(1)
+    actionSheetRef.current?.show()
+  }
+  const moveTo = () => {
+    navigation.navigate('CustomerProducts')
+    actionSheetRef.current?.hide()
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
@@ -37,7 +47,7 @@ const CustomerHome = ({ navigation }) => {
           }}>
           <TouchableOpacity
             style={select == 0 ? styles.button : styles.button1}
-            onPress={() => setSelect(!select)}
+            onPress={() => openSheet()}
             activeOpacity={0.9}>
             <Image
               style={select ? styles.product : styles.product1}
@@ -47,6 +57,49 @@ const CustomerHome = ({ navigation }) => {
               {' '}
               Product
             </Text>
+
+            <ActionSheet
+              containerStyle={styles.actionContainer}
+              defaultOverlayOpacity={0.6}
+              ref={actionSheetRef}>
+              <View style={{ marginTop: 15 }}>
+                <TouchableOpacity
+                  onPress={() => moveTo()}
+                  activeOpacity={0.8}
+                  style={styles.mapContainer}>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.stylesheetimgs}
+                      source={Images.Pictures.imgss}
+                    />
+                    <Text style={styles.sheetText}>Buy</Text>
+                  </View>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.rightArrow}
+                      source={Images.Pictures.rightArrow}
+                    />
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  activeOpacity={0.8}
+                  style={styles.mapContainer}>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.stylesheetimgs}
+                      source={Images.Pictures.box}
+                    />
+                    <Text style={styles.sheetText}>Sell</Text>
+                  </View>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.rightArrow}
+                      source={Images.Pictures.rightArrow}
+                    />
+                  </View>
+                </TouchableOpacity>
+              </View>
+            </ActionSheet>
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={1}
@@ -120,5 +173,56 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontSize: 15,
     top: 15
+  },
+  centerView: {
+    width: '100%',
+    alignSelf: 'center'
+  },
+  actionContainer: {
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20
+  },
+  // shadows: {
+  //   shadowColor: '#00000050',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 3
+  //   },
+  //   shadowOpacity: 0.27,
+  //   shadowRadius: 4.65,
+  //   elevation: 6
+  // },
+  mapContainer: {
+    marginVertical: 16,
+    width: '85%',
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 20,
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.05)',
+    borderRadius: 19
+  },
+  innerStylesheet: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 15,
+    paddingVertical: 10
+  },
+  stylesheetimgs: {
+    height: 50,
+    width: 50
+  },
+
+  rightArrow: {
+    width: 9,
+    height: 16
+  },
+  sheetText: {
+    marginLeft: 15,
+    fontWeight: '500',
+    fontSize: 15,
+    color: '#404043'
   }
 })
