@@ -41,9 +41,7 @@ const CreatePost = ({ navigation }) => {
                 <Image style={styles.girl} source={Images.Pictures.girl}/>
                 <Text style={styles.profileText}>Liza Ashlay</Text>
             </View>
-            <Card 
-            container={{width:"88%",alignSelf:"center"}}
-            />
+        
         </View>
       </>
     )
