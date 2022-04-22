@@ -36,14 +36,14 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
       }
     },
     {
-      name: 'bookmark',
+      name: 'Messages',
       icon: Images.Pictures.measage,
-      navigateTo: 'CustomerBookmark',
+      navigateTo: 'CustomerMessages',
       style: {
         width: 22,
         height: 22
       },
-      text:"Message"
+      text:"Messages"
     },
     {
       name: 'profile',

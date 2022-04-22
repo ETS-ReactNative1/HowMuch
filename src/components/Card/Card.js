@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         borderWidth: 1,
         borderColor: "#00000010",
-        padding: 10,
+        padding: 8,
         marginHorizontal: 8,
         borderRadius: 10,
         shadowColor: "#00000070",
@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
         elevation: 6,
     },
     services: {
-        width: 330,
-        height: 165,
+        width: 320,
+        height: 160,
         resizeMode: "contain",
         marginVertical: 10
     },
