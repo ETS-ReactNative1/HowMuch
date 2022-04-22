@@ -67,7 +67,7 @@ const CustomerFeeds = ({ navigation }) => {
             </View>
             <FlatList
             showsHorizontalScrollIndicator={false}
-               contentContainerStyle={{ paddingBottom: 50,marginTop:15}}
+               contentContainerStyle={{ paddingBottom: 25,marginTop:15}}
             horizontal={true}
             data={card}
             renderItem={({}) => {
@@ -78,6 +78,10 @@ const CustomerFeeds = ({ navigation }) => {
             >
 
             </FlatList>
+            <View style={{flexDirection:"row",justifyContent:"space-between",padding:15}}>
+              <Text style={{color:"#313842",fontSize:16}}>Recommended Services</Text>
+              <Text style={{color:"#58677D"}}>View all</Text>
+            </View>
             <View style={{flexDirection:"row",justifyContent:"space-evenly"}}>
               <View style={styles.card}>
                 <Image style={styles.imges} source={Images.Pictures.electricity} />
@@ -176,8 +180,8 @@ const CustomerFeeds = ({ navigation }) => {
       elevation: 6,
       borderRadius:12,
       alignItems:"center",
-      width:115,
-      height:115,
+      width:110,
+      height:110,
       justifyContent:"center"
     },
     text:{

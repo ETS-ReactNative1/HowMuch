@@ -35,7 +35,15 @@ const Images = {
       dots :require('../assets/images/3dots.png'),
       textarea: require('../assets/images/textarea.png'),
       checkblue: require('../assets/images/checkblue.png'),
-      uncheck: require('../assets/images/uncheck.png')
+      uncheck: require('../assets/images/uncheck.png'),
+      product1: require('../assets/images/product1.png'),
+      product2: require('../assets/images/product2.png'),
+      product3: require('../assets/images/product3.png'),
+      product4: require('../assets/images/product4.png'),
+      cross: require('../assets/images/cross.png'),
+      girl1: require('../assets/images/girl1.png'),
+      girl2: require('../assets/images/girl2.png'),
+      girl3: require('../assets/images/girl3.png'),
     }
 
 }

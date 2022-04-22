@@ -62,8 +62,8 @@ export const ToggleSwitch = ({
 
       <TouchableOpacity
       style={{
-        width: 250,
-        height: 120,        
+        width: 20,
+        height: 20,        
       }}
       activeOpacity={.9}
         onPress={() => {updatedSwitchData()}}
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#000'
   },
   clickableArea: {
-    width: 115,
-    height: 120,
+    width: 15,
+    height: 10,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -116,8 +116,8 @@ const styles = StyleSheet.create({
   },
   slider: {
     position: 'absolute',
-    width: 100,
-    height: 100,
+    width: 10,
+    height: 10,
     borderRadius: 50,
   }
 })
