@@ -37,7 +37,7 @@ const CustomerHome = ({ navigation }) => {
           }}>
           <TouchableOpacity
             style={select == 0 ? styles.button : styles.button1}
-            onPress={() => navigation.navigate('CustomerCreateProduct')}
+            onPress={() => setSelect(!select)}
             activeOpacity={0.9}>
             <Image
               style={select ? styles.product : styles.product1}
