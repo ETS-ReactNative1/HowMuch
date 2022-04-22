@@ -27,10 +27,7 @@ const CustomerLogin = ({ navigation }) => {
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
       <ScrollView style={styles.container}>
-        <Header
-          back={true}
-          container={{ marginTop: Platform.OS == 'ios' ? 30 : 10 }}
-        />
+    
         <View>
           <Text style={styles.loginText}>Login</Text>
         </View>
@@ -89,7 +86,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     lineHeight: 30,
     marginLeft: 25,
-    marginTop: 100
+    marginTop: "10%"
   },
   feildsView: {
     width: '90%',

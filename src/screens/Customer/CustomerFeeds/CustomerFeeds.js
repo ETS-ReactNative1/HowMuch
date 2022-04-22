@@ -41,6 +41,7 @@ const CustomerFeeds = ({ navigation }) => {
             title='Recommended Feeds'
             notification={true}
             />
+            <ScrollView contentContainerStyle={{paddingBottom:"30%"}} showsVerticalScrollIndicator={false}>
             <View style={styles.row}>
               <Text style={styles.select}>Select Location</Text>
               <View style={{flexDirection:"row"}}>
@@ -54,6 +55,7 @@ const CustomerFeeds = ({ navigation }) => {
             <View style={{flexDirection:"row"}}>
               <Image style={styles.search} source={Images.Pictures.search}/>
               <TextInput 
+              placeholderTextColor="#212121"
                  style={styles.input}
               placeholder='Search'
               />
@@ -64,7 +66,8 @@ const CustomerFeeds = ({ navigation }) => {
               <Text>View</Text>
             </View>
             <FlatList
-               contentContainerStyle={{ paddingBottom: 50,height:"90%",marginTop:15 }}
+            showsHorizontalScrollIndicator={false}
+               contentContainerStyle={{ paddingBottom: 50,marginTop:15}}
             horizontal={true}
             data={card}
             renderItem={({}) => {
@@ -75,6 +78,35 @@ const CustomerFeeds = ({ navigation }) => {
             >
 
             </FlatList>
+            <View style={{flexDirection:"row",justifyContent:"space-evenly"}}>
+              <View style={styles.card}>
+                <Image style={styles.imges} source={Images.Pictures.electricity} />
+                <Text style={styles.text}>Electrician</Text>
+              </View>
+              <View style={styles.card}>
+                <Image style={styles.imges} source={Images.Pictures.plumber} />
+                <Text style={styles.text}>Plumber</Text>
+              </View>
+              <View style={styles.card}>
+                <Image style={styles.imges} source={Images.Pictures.paint} />
+                <Text style={styles.text}>Painter</Text>
+              </View>
+            </View>
+            <View style={{flexDirection:"row",justifyContent:"space-evenly",paddingVertical:20}}>
+              <View style={styles.card}>
+                <Image style={styles.imges} source={Images.Pictures.construction} />
+                <Text style={styles.text}>Construction</Text>
+              </View>
+              <View style={styles.card}>
+                <Image style={styles.imges} source={Images.Pictures.fences} />
+                <Text style={styles.text}>Fences</Text>
+              </View>
+              <View style={styles.card}>
+                <Image style={styles.imges} source={Images.Pictures.door} />
+                <Text style={styles.text}>Window - Door</Text>
+              </View>
+            </View>
+            </ScrollView>
          <CustomerTabBar navigation={navigation} active="Feeds" />
         </View>
       </>
@@ -104,7 +136,8 @@ const CustomerFeeds = ({ navigation }) => {
      width:"75%",
      borderColor:"#00000010",
      borderRadius:10,
-     paddingLeft:42
+     paddingLeft:42,
+     
     },
     search:{
       position:"absolute",
@@ -125,6 +158,33 @@ const CustomerFeeds = ({ navigation }) => {
     row1:{
       flexDirection:"row",
       justifyContent:"space-between",paddingHorizontal:20
+    },
+    imges:{
+      width:38,
+      height:38
+    },
+    card:{
+      backgroundColor:"#ffffff",
+      shadowColor: "#00000050",
+      shadowOffset: {
+          width: 0,
+          height: 3,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
+
+      elevation: 6,
+      borderRadius:12,
+      alignItems:"center",
+      width:115,
+      height:115,
+      justifyContent:"center"
+    },
+    text:{
+      color:"#000000",
+      fontSize:11,
+      fontWeight:"500",
+      paddingTop:8
     }
   })
   
