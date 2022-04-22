@@ -25,6 +25,14 @@ const Images = {
       girl: require('../assets/images/girl.png'),
       services: require('../assets/images/services.png'),
       downarrow: require('../assets/images/downarrow.png'),
+      plumber: require('../assets/images/plumber.png'),
+      paint: require('../assets/images/paint.png'),
+      door :require('../assets/images/door.png'),
+      electricity: require('../assets/images/electricity.png'),
+      fences :require('../assets/images/fences.png'),
+      construction :require('../assets/images/construction.png'),
+      arrowLeft :require('../assets/images/arrowLeft.png'),
+      dots :require('../assets/images/3dots.png'),
     }
 }
 export { Images }

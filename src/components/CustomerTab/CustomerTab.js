@@ -28,10 +28,10 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
     {
       name: 'search',
       icon: Images.Pictures.plus,
-      navigateTo: 'CustomerSearch',
+      navigateTo: 'CreatePost',
       style: {
-        width:55,
-        height:55,
+        width:60,
+        height:60,
         
       }
     },
@@ -72,7 +72,7 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
                 source={item.icon}
                 style={[styles.iconStyle, item.style]}
               />
-                 <Text >{item.text}</Text>
+                 <Text style={{textAlign:"center"}}>{item.text}</Text>
             </TouchableOpacity>
           )
         } else {
@@ -85,13 +85,17 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
               style={{ justifyContent: 'space-between', padding: 0}}>
               <Image
                 source={item.icon}
-                style={[styles.iconStyle, item.style]}
+                style={[styles.iconStyle1, item.style]}
               />
               <Text style={styles.text}>{item.text}</Text>
-              <Image
-                source={Images.Pictures.ActiveTab}
-                style={{ height: 10, width: 30 }}
-              />
+              {/* <Image
+                source={Images.Pictures.arrow}
+                style={{ height: 10, width: 25 }}
+              /> */}
+              {/* <View style={{backgroundColor:"red",
+              width:50,
+              paddingTop:5
+            }}></View> */}
             </TouchableOpacity>
           )
         }
@@ -104,20 +108,31 @@ const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
     width: width,
-    height:70,
+    height:76,
     backgroundColor:"#ffffff",
     flexDirection: 'row',
     justifyContent: "space-evenly",
     // alignItems:"center",
     bottom: 0,
-    position: 'absolute'
+    position: 'absolute',
   },
   iconStyle: {
     height: 22,
     width: 22,
-    marginVertical: 15
+    marginVertical: 10,
+    alignSelf:"center"
+    // tintColor:"#0888FF"
   },
   text:{
-    color:"#0888FF"
-  }
+    color:"#0888FF",
+    paddingBottom:15,
+    textAlign:"center"
+  },
+  iconStyle1: {
+    height: 22,
+    width: 22,
+    marginVertical: 10,
+     tintColor:"#0888FF",
+     alignSelf:"center"
+  },
 })

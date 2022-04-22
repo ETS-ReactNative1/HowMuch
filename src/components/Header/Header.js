@@ -24,7 +24,9 @@ export const Header = ({
   menu = null,
   serach = null,
   headerTest = '',
-  notification = null
+  notification = null,
+  arrow = null,
+  dots = null
 }) => {
   return (
     <View style={styles.container}>
@@ -37,6 +39,11 @@ export const Header = ({
         {menu && (
           <TouchableOpacity activeOpacity={0.9} onPress={onBackPress}>
             <Image style={styles.arrow} source={Images.Pictures.home} />
+          </TouchableOpacity>
+        )}
+           {arrow && (
+          <TouchableOpacity activeOpacity={0.9} onPress={onBackPress}>
+            <Image style={styles.arrow} source={Images.Pictures.arrowLeft} />
           </TouchableOpacity>
         )}
         <Text style={[headerTest, styles.headerTest]}>{title}</Text>
@@ -55,6 +62,11 @@ export const Header = ({
             <Image style={styles.ser} source={Images.Pictures.notification} />
           </TouchableOpacity>
         )}
+              {dots && (
+          <TouchableOpacity>
+            <Image style={styles.arrow} source={Images.Pictures.dots} />
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   )
@@ -70,7 +82,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingTop: 20
+    paddingTop: 20,
   },
   ser: {
     width: 26,
