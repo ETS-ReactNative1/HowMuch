@@ -71,7 +71,6 @@ const CustomerProducts = ({ navigation }) => {
           <View style={styles.row1}>
             <FlatList
               showsHorizontalScrollIndicator={false}
-              contentContainerStyle={{ marginTop: 10, marginLeft: 15 }}
               horizontal={true}
               data={card}
               renderItem={({ item, index }) => {
@@ -167,7 +166,9 @@ const styles = StyleSheet.create({
     fontSize: 13
   },
   row1: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginHorizontal: 15,
+    marginTop: 10
   },
   toplist: {
     flexDirection: 'row',
