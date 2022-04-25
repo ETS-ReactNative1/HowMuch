@@ -49,7 +49,9 @@ const Images = {
       car: require('../assets/images/car.png'),
       boll: require('../assets/images/boll.png'),
       music: require('../assets/images/music.png'),
-      rightArrow: require('../assets/images/rightArrow.png')
+      rightArrow: require('../assets/images/rightArrow.png'),
+      editIcon: require('../assets/images/editIcon.png'),
+      camera: require('../assets/images/camera.png')
     }
 
 }
