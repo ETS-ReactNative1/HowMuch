@@ -48,7 +48,7 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
     {
       name: 'profile',
       icon: Images.Pictures.profile,
-      navigateTo: 'CustomerProfile',
+      navigateTo: 'Profile',
       style: {
         width: 22,
         height: 22,

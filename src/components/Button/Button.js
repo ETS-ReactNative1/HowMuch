@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
   },
   test: {
     color: '#FFFFFF',
-    fontSize: 14
+    fontSize: 14,
+    fontWeight:'500'
   }
 })
