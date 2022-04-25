@@ -53,7 +53,9 @@ const Images = {
     imgbot: require('../assets/images/imgbot.png'),
     msg: require('../assets/images/msg.png'),
     laptop: require('../assets/images/laptop.png'),
-    rightArrow: require('../assets/images/rightArrow.png')
+    rightArrow: require('../assets/images/rightArrow.png'),
+    work: require('../assets/images/work.png'),
+    group: require('../assets/images/group00.png')
   }
 }
 export { Images }
