@@ -14,6 +14,7 @@ import {
 
 import { Header } from '../../../components/Header/Header'
 import { Images } from '../../../utils/Images'
+import { Button } from '../../../components/Button/Button'
 
 const chatData = [
   {
@@ -115,6 +116,9 @@ export default function CustomerSelectCategory({ navigation }) {
             )
           }}
         />
+        <View style={styles.btnView}>
+          <Button onPress={() => navigation.goBack()} title={'Done'} />
+        </View>
       </View>
     </>
   )
@@ -130,7 +134,8 @@ const styles = StyleSheet.create({
     fontSize: 12
   },
   flatView: {
-    marginTop: '10%'
+    marginTop: '5%',
+    paddingBottom: '20%'
   },
   listView: {
     flexDirection: 'row',
@@ -147,5 +152,12 @@ const styles = StyleSheet.create({
   },
   logoView: {
     marginRight: 20
+  },
+  btnView: {
+    marginBottom: 10,
+    marginRight: 30,
+    position: 'absolute',
+    bottom: 0,
+    alignSelf: 'center'
   }
 })
