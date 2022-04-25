@@ -18,7 +18,7 @@ const { width, height } = Dimensions.get('screen')
 import { useIsFocused, useNavigation } from '@react-navigation/native'
 
 export const Header = ({
-  onBackPress = {},
+  onBackPress = null,
   back = null,
   title = '',
   menu = null,
@@ -28,21 +28,28 @@ export const Header = ({
   arrow = null,
   dots = null
 }) => {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         {back && (
-          <TouchableOpacity activeOpacity={0.9} onPress={onBackPress}>
+          <TouchableOpacity
+            activeOpacity={0.9}
+            onPress={onBackPress ? onBackPress : () => navigation.goBack()}>
             <Image style={styles.arrow} source={Images.Pictures.arrow} />
           </TouchableOpacity>
         )}
         {menu && (
-          <TouchableOpacity activeOpacity={0.9} onPress={onBackPress}>
+          <TouchableOpacity
+            activeOpacity={0.9}
+            onPress={onBackPress ? onBackPress : () => navigation.goBack()}>
             <Image style={styles.arrow} source={Images.Pictures.home} />
           </TouchableOpacity>
         )}
-           {arrow && (
-          <TouchableOpacity activeOpacity={0.9} onPress={onBackPress}>
+        {arrow && (
+          <TouchableOpacity
+            activeOpacity={0.9}
+            onPress={onBackPress ? onBackPress : () => navigation.goBack()}>
             <Image style={styles.arrow} source={Images.Pictures.arrowLeft} />
           </TouchableOpacity>
         )}
@@ -62,7 +69,7 @@ export const Header = ({
             <Image style={styles.ser} source={Images.Pictures.notification} />
           </TouchableOpacity>
         )}
-              {dots && (
+        {dots && (
           <TouchableOpacity>
             <Image style={styles.arrow} source={Images.Pictures.dots} />
           </TouchableOpacity>
@@ -82,7 +89,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingTop: 20,
+    paddingTop: 20
   },
   ser: {
     width: 26,
