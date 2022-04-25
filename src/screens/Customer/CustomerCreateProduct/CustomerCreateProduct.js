@@ -46,7 +46,7 @@ const CustomerCreateProduct = ({ navigation }) => {
             <TouchableOpacity
               style={styles.categoryView}
               activeOpacity={0.8}
-              onPress={() => navigation.navigate('CustomerSelectProduct')}>
+              onPress={() => navigation.navigate('CustomerSelectCategory')}>
               <Text style={styles.categoryText}>Select Categories</Text>
               <Image style={styles.down} source={Images.Pictures.downarrow} />
             </TouchableOpacity>

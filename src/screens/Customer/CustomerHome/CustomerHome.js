@@ -85,6 +85,7 @@ const services = () => {
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
+                  onPress={() => moveToSell()}
                   activeOpacity={0.8}
                   style={styles.mapContainer}>
                   <View style={styles.innerStylesheet}>

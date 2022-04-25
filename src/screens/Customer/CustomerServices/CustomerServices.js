@@ -114,6 +114,7 @@ const Services = [
             >
             </FlatList>
             <Card 
+            onPress={() => navigation.navigate('ServicesDetail')}
             categary='Plumber'
             backgroundColor={{backgroundColor:"#7C2FF9"}}
             backgroundColor1={{backgroundColor:"#FE5151"}}

@@ -30,8 +30,8 @@ export const Card = ({
     categary = "",
     backgroundColor = "",
     backgroundColor1 = "",
-    color1="",
-    color=""
+    color1 = "",
+    color = ""
 }) => {
     return (
         <TouchableOpacity
@@ -39,19 +39,19 @@ export const Card = ({
             onPress={onPress}
             style={[styles.container, container]}
         >
-            <View style={{ flexDirection: "row", alignItems: "center"}}>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image style={{ width: 28, height: 28, resizeMode: "contain", marginLeft: 10 }} source={profileImg} />
                 <View>
-                   <View style={{flexDirection:"row"}}>
-                   <View style={{flexDirection:"row",alignItems:"center",marginLeft:6}}>
-                        <View style={[styles.round, backgroundColor]}></View>
-                        <Text  style={[styles.text,color]}>{categary}</Text>
+                    <View style={{ flexDirection: "row" }}>
+                        <View style={{ flexDirection: "row", alignItems: "center", marginLeft: 6 }}>
+                            <View style={[styles.round, backgroundColor]}></View>
+                            <Text style={[styles.text, color]}>{categary}</Text>
+                        </View>
+                        <View style={{ flexDirection: "row", marginLeft: 8, alignItems: "center" }}>
+                            <View style={[styles.round, backgroundColor1]}></View>
+                            <Text style={[styles.text, color1]}>{categary1}</Text>
+                        </View>
                     </View>
-                    <View style={{flexDirection:"row",marginLeft:8,alignItems:"center"}}>
-                    <View style={[styles.round, backgroundColor1]}></View>
-                    <Text style={[styles.text,color1]}>{categary1}</Text>
-                    </View>
-                   </View>
                     <Text style={{ color: "#455267", fontSize: 12, fontWeight: "700", paddingLeft: 8 }}>
                         {profile}
                     </Text>
@@ -95,9 +95,9 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
 
         elevation: 6,
-        paddingHorizontal:8,
-        paddingVertical:10,
-        paddingBottom:16
+        paddingHorizontal: 8,
+        paddingVertical: 10,
+        paddingBottom: 16
     },
     services: {
         width: 340,
@@ -116,18 +116,32 @@ const styles = StyleSheet.create({
     round: {
         width: 8,
         height: 8,
-        borderRadius:20
+        borderRadius: 20
     },
-    text:{
-        paddingBottom:4,
-        paddingLeft:2,
-        fontSize:12,
-        fontWeight:"bold"
+    text: {
+        paddingBottom: 4,
+        paddingLeft: 2,
+        fontSize: 12,
+        fontWeight: "bold"
     },
-    round:{
-        width:8,
-        height:8,
-        borderRadius:20,
+    round: {
+        width: 8,
+        height: 8,
+        borderRadius: 20,
 
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
