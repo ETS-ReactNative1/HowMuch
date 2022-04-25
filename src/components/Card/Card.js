@@ -25,19 +25,37 @@ export const Card = ({
     watch = "Apple Watch 2022",
     decription = "Praesent in posuere dui. In hac habitas plate",
     decription1 = "ctumst. Morbi . View More...",
-    container = {}
+    container = {},
+    categary1 = "",
+    categary = "",
+    backgroundColor = "",
+    backgroundColor1 = "",
+    color1="",
+    color=""
 }) => {
     return (
         <TouchableOpacity
             activeOpacity={0.9}
             onPress={onPress}
-            style={[styles.container,container]}
+            style={[styles.container, container]}
         >
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <View style={{ flexDirection: "row", alignItems: "center"}}>
                 <Image style={{ width: 28, height: 28, resizeMode: "contain", marginLeft: 10 }} source={profileImg} />
-                <Text style={{ color: "#455267", fontSize: 12, fontWeight: "700", paddingLeft: 8 }}>
-                    {profile}
-                </Text>
+                <View>
+                   <View style={{flexDirection:"row"}}>
+                   <View style={{flexDirection:"row",alignItems:"center",marginLeft:6}}>
+                        <View style={[styles.round, backgroundColor]}></View>
+                        <Text  style={[styles.text,color]}>{categary}</Text>
+                    </View>
+                    <View style={{flexDirection:"row",marginLeft:8,alignItems:"center"}}>
+                    <View style={[styles.round, backgroundColor1]}></View>
+                    <Text style={[styles.text,color1]}>{categary1}</Text>
+                    </View>
+                   </View>
+                    <Text style={{ color: "#455267", fontSize: 12, fontWeight: "700", paddingLeft: 8 }}>
+                        {profile}
+                    </Text>
+                </View>
             </View>
             <Image style={styles.services} source={product} />
             <View style={{ flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 10 }}>
@@ -66,10 +84,9 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         borderWidth: 1,
         borderColor: "#00000010",
-        padding: 8,
         marginHorizontal: 8,
         borderRadius: 10,
-        shadowColor: "#00000070",
+        shadowColor: "#00000080",
         shadowOffset: {
             width: 0,
             height: 3,
@@ -78,10 +95,13 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
 
         elevation: 6,
+        paddingHorizontal:8,
+        paddingVertical:10,
+        paddingBottom:16
     },
     services: {
-        width: 320,
-        height: 160,
+        width: 340,
+        height: 170,
         resizeMode: "contain",
         marginVertical: 10
     },
@@ -92,5 +112,22 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 20
+    },
+    round: {
+        width: 8,
+        height: 8,
+        borderRadius:20
+    },
+    text:{
+        paddingBottom:4,
+        paddingLeft:2,
+        fontSize:12,
+        fontWeight:"bold"
+    },
+    round:{
+        width:8,
+        height:8,
+        borderRadius:20,
+
     }
 })
