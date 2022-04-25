@@ -20,9 +20,11 @@ import LinearGradient from 'react-native-linear-gradient'
 import { CustomerTabBar } from '../../../components/CustomerTab/CustomerTab'
 import { InputField } from '../../../components/InputField/InputField'
 import { Card } from '../../../components/Card/Card'
+import { Modals } from '../../../components/Modal/Modals'
 
 const CustomerProducts = ({ navigation }) => {
   const [selected, setSelected] = useState('')
+  const [isOpen, setisOpen] = useState(false)
   const card = [
     {
       img: Images.Pictures.boll,
@@ -109,6 +111,8 @@ const CustomerProducts = ({ navigation }) => {
             renderItem={({}) => {
               return (
                 <Card
+                  onPress={() => navigation.navigate('CustomerProductDetails')}
+                  onBidPress={() => setisOpen(true)}
                   container={{
                     width: '88%',
                     alignSelf: 'center',
@@ -118,6 +122,11 @@ const CustomerProducts = ({ navigation }) => {
               )
             }}></FlatList>
         </ScrollView>
+        <Modals
+          onCross={() => setisOpen(false)}
+          onPress={() => setisOpen(false)}
+          visibleState={isOpen}
+        />
       </View>
     </>
   )
