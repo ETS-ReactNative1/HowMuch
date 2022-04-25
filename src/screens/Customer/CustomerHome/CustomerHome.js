@@ -31,6 +31,11 @@ const CustomerHome = ({ navigation }) => {
     actionSheetRef.current?.hide()
   }
 
+  const moveToSell = () => {
+    navigation.navigate('CustomerCreateProduct')
+    actionSheetRef.current?.hide()
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
@@ -82,6 +87,7 @@ const CustomerHome = ({ navigation }) => {
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
+                  onPress={() => moveToSell()}
                   activeOpacity={0.8}
                   style={styles.mapContainer}>
                   <View style={styles.innerStylesheet}>

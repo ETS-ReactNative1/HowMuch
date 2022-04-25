@@ -10,12 +10,12 @@ import CustomerOtp from '../screens/Customer/Auth/CustomerOtp/CustomerOtp'
 import CustomerUpdatePassword from '../screens/Customer/Auth/CustomerUpdatePassword/CustomerUpdatePassword'
 import CustomerCreateProduct from '../screens/Customer/CustomerCreateProduct/CustomerCreateProduct'
 import CreatePost from '../screens/Customer/CreatePost/CreatePost'
-// import CustomerSelectProduct from '../screens/Customer/CustomerSelectProduct/CustomerSelectProduct'
 import CustomerMessages from '../screens/Customer/CustomerMessages/CustomerMessages'
 import CustomerProducts from '../screens/Customer/CustomerProducts/CustomerProducts'
 import CustomerSelectCategory from '../screens/Customer/CustomerSelectCategory/CustomerSelectCategory'
 import { Profile } from '../screens/Customer/CutomerProfile/Profile'
 import { EditProfile } from '../screens/Customer/CutomerProfile/EditProfile'
+import CustomerProductDetails from '../screens/Customer/CustomerProductDetails/CustomerProductDetails'
 const CustomerAuthStack = createStackNavigator()
 const CustomerApp = createStackNavigator()
 
@@ -62,7 +62,7 @@ export function CustomeAppStack() {
       <CustomerApp.Screen
         name="CustomerHome"
         component={CustomerHome}
-      // component={CustomerDrawerNavigator}
+        // component={CustomerDrawerNavigator}
       />
       <CustomerApp.Screen name="CustomerFeeds" component={CustomerFeeds} />
       <CustomerApp.Screen
@@ -93,6 +93,12 @@ export function CustomeAppStack() {
         name="EditProfile"
         component={EditProfile}
       />
+      
+      <CustomerApp.Screen
+        name="CustomerProductDetails"
+        component={CustomerProductDetails}
+      />
+      
     </CustomerApp.Navigator>
   )
 }
