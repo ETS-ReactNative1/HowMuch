@@ -10,6 +10,7 @@ import {
 } from 'react-native'
 import { Header } from '../../../components/Header/Header'
 import { Images } from '../../../utils/Images'
+import { CustomerTabBar } from '../../../components/CustomerTab/CustomerTab'
 
 const PersonalData = [
   {
@@ -31,7 +32,7 @@ const PersonalData = [
   {
     titleText: 'Phone Number',
     infoText: '+971 1234123'
-  }
+  }, 
 ]
 
 export const Profile = ({ navigation }) => {
@@ -51,7 +52,7 @@ export const Profile = ({ navigation }) => {
         <ScrollView
           contentContainerStyle={{
             flexGrow: 1,
-            paddingBottom: 40,
+            paddingBottom: 100,
             paddingTop: 35
           }}
           scrollEnabled={true}
@@ -103,6 +104,7 @@ export const Profile = ({ navigation }) => {
             </View>
           </View>
         </ScrollView>
+        <CustomerTabBar navigation={navigation} active="Feeds" />
       </View>
     </>
   )

@@ -123,7 +123,7 @@ export const EditProfile = ({ navigation }) => {
             </View>
           </View>
           <View style={styles.saveButtonContainer}>
-            <Button title={'Save Changes'} containerStyle={{ width: '85%' }} />
+            <Button title={'Save Changes'} containerStyle={{ width: '87%' }} />
           </View>
         </ScrollView>
       </View>
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
   inputContainers: {
     marginTop: 20,
     marginRight: 5,
-    width: '90%',
+    width: '87%',
     alignSelf: 'center'
   },
   innerView: {

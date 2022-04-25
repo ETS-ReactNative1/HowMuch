@@ -51,8 +51,11 @@ const Images = {
       music: require('../assets/images/music.png'),
       rightArrow: require('../assets/images/rightArrow.png'),
       editIcon: require('../assets/images/editIcon.png'),
-      camera: require('../assets/images/camera.png')
+      camera: require('../assets/images/camera.png'),
+      work: require('../assets/images/work.png'),
+      group: require('../assets/images/group00.png')
     }
 
+ 
 }
 export { Images }

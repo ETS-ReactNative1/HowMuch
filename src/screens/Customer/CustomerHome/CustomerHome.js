@@ -19,23 +19,21 @@ import { CustomerTabBar } from '../../../components/CustomerTab/CustomerTab'
 import ActionSheet, { SheetManager } from 'react-native-actions-sheet'
 
 const CustomerHome = ({ navigation }) => {
-  const [select, setSelect] = useState(1)
+  const [select, setSelect] = useState()
   const actionSheetRef = createRef()
 
   const openSheet = () => {
-    setSelect(1)
+    setSelect(!select)
     actionSheetRef.current?.show()
   }
   const moveTo = () => {
     navigation.navigate('CustomerProducts')
     actionSheetRef.current?.hide()
   }
-
-  const moveToSell = () => {
-    navigation.navigate('CustomerCreateProduct')
-    actionSheetRef.current?.hide()
-  }
-
+const services = () => {
+  setSelect(!select)
+  navigation.navigate('CustomerServices')
+}
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
@@ -110,7 +108,9 @@ const CustomerHome = ({ navigation }) => {
           <TouchableOpacity
             activeOpacity={1}
             style={select ? styles.button : styles.button1}
-            onPress={() => setSelect(!select)}>
+            onPress={() => services()}
+            // onPress={() => setSelect(!select)}
+            >
             <Image
               style={
                 select
