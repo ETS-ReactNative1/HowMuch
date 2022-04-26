@@ -65,7 +65,7 @@ const CustomerHome = ({ navigation }) => {
             onPress={() => openSheet()}
             activeOpacity={0.9}>
             <Image
-              style={select ? styles.product : styles.product1}
+              style={select == 0 ? styles.product1 : styles.product}
               source={Images.Pictures.product}
             />
             <Text style={select == 0 ? styles.test : styles.test1}>

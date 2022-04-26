@@ -18,6 +18,9 @@ import { EditProfile } from '../screens/Customer/CutomerProfile/EditProfile'
 import CustomerServices from '../screens/Customer/CustomerServices/CustomerServices'
 import CustomerProductDetails from '../screens/Customer/CustomerProductDetails/CustomerProductDetails'
 import ServicesDetail from '../screens/Customer/ServicesDetail/ServicesDetail'
+import CustomerSearch from '../screens/Customer/CustomerSearch/CustomerSearch'
+import CustomerSearchFilter from '../screens/Customer/CustomerSearchFilter/CustomerSearchFilter'
+import CustomerLocation from '../screens/Customer/CustomerLocation/CustomerLocation'
 import { CustomerNotification } from '../screens/Customer/CustomerNotification/CustomerNotification'
 import CustomerIntersted from '../screens/Customer/CustomerIntersted/CustomerIntersted'
 import PurchaseHistory from '../screens/Customer/CustomerPurchaseHistory/CustomerPurchaseHistory'
@@ -99,8 +102,20 @@ export function CustomeAppStack() {
       />
       <CustomerApp.Screen name="ServicesDetail" component={ServicesDetail} />
       <CustomerApp.Screen
-        name="CustomerNotification"
-        component={CustomerNotification}
+        name="CustomerSearch"
+        component={CustomerSearch}
+      />
+          <CustomerApp.Screen
+        name="CustomerSearchFilter"
+        component={CustomerSearchFilter}
+      />
+            <CustomerApp.Screen
+        name="CustomerLocation"
+        component={CustomerLocation}
+      />
+      <CustomerApp.Screen
+       name="CustomerNotification"
+       component={CustomerNotification}
       />
       <CustomerApp.Screen
         name="CustomerIntersted"

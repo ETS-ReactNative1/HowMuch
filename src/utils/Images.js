@@ -56,12 +56,18 @@ const Images = {
     group: require('../assets/images/group00.png'),
 
     laptop: require('../assets/images/laptop.png'),
-    imgbot: require('../assets/images/imgbot.png'),
     Path: require('../assets/images/Path.png'),
     msg: require('../assets/images/msg.png'),
     whitemsg: require('../assets/images/whitemsg.png'),
     Vdots: require('../assets/images/Vdots.png'),
-    reddot: require('../assets/images/reddot.png')
+    reddot: require('../assets/images/reddot.png'),
+    crossX: require('../assets/images/crossX.png'),
+    imgbot: require('../assets/images/imgbot.png'),
+    x: require('../assets/images/x.png'),
+    clock: require('../assets/images/clock.png'),
+    close: require('../assets/images/closeSquare.png'),
+    delete: require('../assets/images/delete.png'),
+    volume: require('../assets/images/volume.png')
   }
 }
 export { Images }
