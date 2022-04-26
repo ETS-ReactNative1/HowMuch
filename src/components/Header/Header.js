@@ -66,7 +66,7 @@ export const Header = ({
         )}
         {notification && (
           <TouchableOpacity
-          activeOpacity={0.9}
+            activeOpacity={0.9}
             onPress={() => navigation.navigate('CustomerNotification')}>
             <Image style={styles.ser} source={Images.Pictures.notification} />
           </TouchableOpacity>
@@ -91,7 +91,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingTop: 20
+    paddingTop: 20,
+    paddingBottom: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(135, 135, 135, 0.1)'
   },
   ser: {
     width: 26,
