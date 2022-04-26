@@ -65,7 +65,9 @@ export const Header = ({
           </TouchableOpacity>
         )}
         {notification && (
-          <TouchableOpacity>
+          <TouchableOpacity
+          activeOpacity={0.9}
+            onPress={() => navigation.navigate('CustomerNotification')}>
             <Image style={styles.ser} source={Images.Pictures.notification} />
           </TouchableOpacity>
         )}

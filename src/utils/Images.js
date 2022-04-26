@@ -59,6 +59,8 @@ const Images = {
     x: require('../assets/images/x.png'),
     clock: require('../assets/images/clock.png'),
     close: require('../assets/images/closeSquare.png'),
+    delete: require('../assets/images/delete.png'),
+    volume: require('../assets/images/volume.png'),
   }
 }
 export { Images }
