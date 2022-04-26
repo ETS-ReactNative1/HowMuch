@@ -19,6 +19,8 @@ import CustomerServices from '../screens/Customer/CustomerServices/CustomerServi
 import CustomerProductDetails from '../screens/Customer/CustomerProductDetails/CustomerProductDetails'
 import ServicesDetail from '../screens/Customer/ServicesDetail/ServicesDetail'
 import { CustomerNotification } from '../screens/Customer/CustomerNotification/CustomerNotification'
+import { VideoCallScreen } from '../screens/Customer/VideoCallScreen/VideoCallScreen'
+import { AudioCallScreen } from '../screens/Customer/AudioCallScreen/AudioCallScreen'
 const CustomerAuthStack = createStackNavigator()
 const CustomerApp = createStackNavigator()
 
@@ -111,6 +113,14 @@ export function CustomeAppStack() {
       <CustomerApp.Screen
         name="CustomerNotification"
         component={CustomerNotification}
+      />
+      <CustomerApp.Screen
+        name="VideoCallScreen"
+        component={VideoCallScreen}
+      />
+      <CustomerApp.Screen
+        name="AudioCallScreen"
+        component={AudioCallScreen}
       />
     </CustomerApp.Navigator>
   )

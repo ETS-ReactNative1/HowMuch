@@ -41,6 +41,7 @@ const Images = {
       product3: require('../assets/images/product3.png'),
       product4: require('../assets/images/product4.png'),
       cross: require('../assets/images/cross.png'),
+      crossX: require('../assets/images/crossX.png'),
       girl1: require('../assets/images/girl1.png'),
       girl2: require('../assets/images/girl2.png'),
       girl3: require('../assets/images/girl3.png'),
@@ -53,7 +54,16 @@ const Images = {
       editIcon: require('../assets/images/editIcon.png'),
       camera: require('../assets/images/camera.png'),
       work: require('../assets/images/work.png'),
-      group: require('../assets/images/group00.png')
+      group: require('../assets/images/group00.png'),
+      girl4: require('../assets/images/girl4.png'),
+      girl5: require('../assets/images/girl5.png'),
+      girl6: require('../assets/images/girl6.png'),
+      audioCallImg: require('../assets/images/audioCallImg.png'),
+      backVideoImg: require('../assets/images/backVideoImg.png'),
+      bottomShadow: require('../assets/images/bottomShadow.png'),
+      muteIcon: require('../assets/images/muteIcon.png'),
+      videoChatIcon: require('../assets/images/videoChatIcon.png'),
+      callReceiverIcon: require('../assets/images/callReceiverIcon.png'),
     }
 
  
