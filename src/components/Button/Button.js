@@ -18,18 +18,20 @@ const { width, height } = Dimensions.get('screen')
 import { useIsFocused, useNavigation } from '@react-navigation/native'
 
 export const Button = ({
-    title = "",
-    containerStyle= {},
-    onPress  = () => { },
+  title = '',
+  containerStyle = {},
+  titleStyle = {},
+  onPress = () => {}
 }) => {
-    return (
-        <TouchableOpacity 
-        activeOpacity={0.9}
-        onPress={onPress}
-        style={[styles.container,containerStyle]}>
-            <Text style={styles.test}>{title}</Text>
-        </TouchableOpacity>
-    )
+  return (
+    <TouchableOpacity
+      activeOpacity={0.9}
+      onPress={onPress}
+      style={[styles.container, containerStyle]}>
+      {/* <Image style={styles.Path} source={Images.Pictures.Path} /> */}
+      <Text style={[styles.test, titleStyle]}>{title}</Text>
+    </TouchableOpacity>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -46,6 +48,11 @@ const styles = StyleSheet.create({
   test: {
     color: '#FFFFFF',
     fontSize: 14,
-    fontWeight:'500'
+    fontWeight: '500'
+  },
+  Path: {
+    width: 7,
+    height: 7,
+    marginRight: 10
   }
 })

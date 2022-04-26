@@ -22,6 +22,8 @@ import CustomerSearch from '../screens/Customer/CustomerSearch/CustomerSearch'
 import CustomerSearchFilter from '../screens/Customer/CustomerSearchFilter/CustomerSearchFilter'
 import CustomerLocation from '../screens/Customer/CustomerLocation/CustomerLocation'
 import { CustomerNotification } from '../screens/Customer/CustomerNotification/CustomerNotification'
+import CustomerIntersted from '../screens/Customer/CustomerIntersted/CustomerIntersted'
+import PurchaseHistory from '../screens/Customer/CustomerPurchaseHistory/CustomerPurchaseHistory'
 const CustomerAuthStack = createStackNavigator()
 const CustomerApp = createStackNavigator()
 
@@ -68,17 +70,14 @@ export function CustomeAppStack() {
       <CustomerApp.Screen
         name="CustomerHome"
         component={CustomerHome}
-      // component={CustomerDrawerNavigator}
+        // component={CustomerDrawerNavigator}
       />
       <CustomerApp.Screen name="CustomerFeeds" component={CustomerFeeds} />
       <CustomerApp.Screen
         name="CustomerCreateProduct"
         component={CustomerCreateProduct}
       />
-      <CustomerApp.Screen
-        name="CreatePost"
-        component={CreatePost}
-      />
+      <CustomerApp.Screen name="CreatePost" component={CreatePost} />
       <CustomerApp.Screen
         name="CustomerSelectCategory"
         component={CustomerSelectCategory}
@@ -91,26 +90,17 @@ export function CustomeAppStack() {
         name="CustomerMessages"
         component={CustomerMessages}
       />
+      <CustomerApp.Screen name="Profile" component={Profile} />
+      <CustomerApp.Screen name="EditProfile" component={EditProfile} />
       <CustomerApp.Screen
-        name="Profile"
-        component={Profile}
-      />
-      <CustomerApp.Screen
-        name="EditProfile"
-        component={EditProfile}
-      />
-       <CustomerApp.Screen
         name="CustomerServices"
-        component={CustomerServices} />
+        component={CustomerServices}
+      />
       <CustomerApp.Screen
         name="CustomerProductDetails"
         component={CustomerProductDetails}
       />
-      
-      <CustomerApp.Screen
-        name="ServicesDetail"
-        component={ServicesDetail}
-      />
+      <CustomerApp.Screen name="ServicesDetail" component={ServicesDetail} />
       <CustomerApp.Screen
         name="CustomerSearch"
         component={CustomerSearch}
@@ -127,6 +117,11 @@ export function CustomeAppStack() {
        name="CustomerNotification"
        component={CustomerNotification}
       />
+      <CustomerApp.Screen
+        name="CustomerIntersted"
+        component={CustomerIntersted}
+      />
+      <CustomerApp.Screen name="PurchaseHistory" component={PurchaseHistory} />
     </CustomerApp.Navigator>
   )
 }

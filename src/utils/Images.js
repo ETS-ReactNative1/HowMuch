@@ -49,18 +49,25 @@ const Images = {
     car: require('../assets/images/car.png'),
     boll: require('../assets/images/boll.png'),
     music: require('../assets/images/music.png'),
-    crossX: require('../assets/images/crossX.png'),
-    imgbot: require('../assets/images/imgbot.png'),
-    msg: require('../assets/images/msg.png'),
-    laptop: require('../assets/images/laptop.png'),
     rightArrow: require('../assets/images/rightArrow.png'),
+    editIcon: require('../assets/images/editIcon.png'),
+    camera: require('../assets/images/camera.png'),
     work: require('../assets/images/work.png'),
     group: require('../assets/images/group00.png'),
+
+    laptop: require('../assets/images/laptop.png'),
+    Path: require('../assets/images/Path.png'),
+    msg: require('../assets/images/msg.png'),
+    whitemsg: require('../assets/images/whitemsg.png'),
+    Vdots: require('../assets/images/Vdots.png'),
+    reddot: require('../assets/images/reddot.png'),
+    crossX: require('../assets/images/crossX.png'),
+    imgbot: require('../assets/images/imgbot.png'),
     x: require('../assets/images/x.png'),
     clock: require('../assets/images/clock.png'),
     close: require('../assets/images/closeSquare.png'),
     delete: require('../assets/images/delete.png'),
-    volume: require('../assets/images/volume.png'),
+    volume: require('../assets/images/volume.png')
   }
 }
 export { Images }
