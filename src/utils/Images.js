@@ -78,7 +78,5 @@ const Images = {
       delete: require('../assets/images/delete.png'),
       volume: require('../assets/images/volume.png')
     }
-
-
 }
 export { Images }
