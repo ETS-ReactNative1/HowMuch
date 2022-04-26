@@ -16,6 +16,9 @@ import CustomerSelectCategory from '../screens/Customer/CustomerSelectCategory/C
 import CustomerServices from '../screens/Customer/CustomerServices/CustomerServices'
 import CustomerProductDetails from '../screens/Customer/CustomerProductDetails/CustomerProductDetails'
 import ServicesDetail from '../screens/Customer/ServicesDetail/ServicesDetail'
+import CustomerSearch from '../screens/Customer/CustomerSearch/CustomerSearch'
+import CustomerSearchFilter from '../screens/Customer/CustomerSearchFilter/CustomerSearchFilter'
+import CustomerLocation from '../screens/Customer/CustomerLocation/CustomerLocation'
 const CustomerAuthStack = createStackNavigator()
 const CustomerApp = createStackNavigator()
 
@@ -95,6 +98,18 @@ export function CustomeAppStack() {
       <CustomerApp.Screen
         name="ServicesDetail"
         component={ServicesDetail}
+      />
+      <CustomerApp.Screen
+        name="CustomerSearch"
+        component={CustomerSearch}
+      />
+          <CustomerApp.Screen
+        name="CustomerSearchFilter"
+        component={CustomerSearchFilter}
+      />
+            <CustomerApp.Screen
+        name="CustomerLocation"
+        component={CustomerLocation}
       />
     </CustomerApp.Navigator>
   )

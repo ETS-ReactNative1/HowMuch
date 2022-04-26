@@ -55,7 +55,10 @@ const Images = {
     laptop: require('../assets/images/laptop.png'),
     rightArrow: require('../assets/images/rightArrow.png'),
     work: require('../assets/images/work.png'),
-    group: require('../assets/images/group00.png')
+    group: require('../assets/images/group00.png'),
+    x: require('../assets/images/x.png'),
+    clock: require('../assets/images/clock.png'),
+    close: require('../assets/images/closeSquare.png'),
   }
 }
 export { Images }

@@ -92,9 +92,9 @@ const ServicesDetail = ({ navigation }) => {
           </View>
         </View>
         <View style={styles.www}>
-            <Image style={{width:20,
-            height:20}} source={Images.Pictures.group}/>
-            <Text>www.mandelectricalcolutions.com</Text>
+            <Image style={{width:15,
+            height:15}} source={Images.Pictures.group}/>
+            <Text style={styles.com}>www.mandelectricalcolutions.com</Text>
         </View>
         <View>
           <View style={styles.topViewlist}>
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 30,
-    marginTop: 50
+    marginTop: 20
   },
   txtone: {
     color: '#313842',
@@ -243,8 +243,23 @@ const styles = StyleSheet.create({
   },
   www:{
       flexDirection:"row",
-      paddingVertical:10,
+      paddingVertical:25,
       paddingHorizontal:20,
-      backgroundColor:"red"
+      shadowColor: "#00000080",
+      shadowOffset: {
+          width: 0,
+          height: 3,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
+      elevation:4,
+      alignItems:"center",
+      marginHorizontal:20,
+      marginVertical:10,
+  },
+  com:{
+      textDecorationLine:"underline",
+      paddingLeft:12,
+      fontWeight:"bold"
   }
 })
