@@ -30,8 +30,9 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
       icon: Images.Pictures.plus,
       navigateTo: 'CreatePost',
       style: {
-        width:60,
-        height:60,
+        width:68,
+        height:68,
+        marginLeft:6
         
       }
     },
@@ -67,6 +68,7 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
               onPress={() => {
                 item.navigateTo && navigation.navigate(item.navigateTo)
               }}
+              
               >
               <Image
                 source={item.icon}
@@ -115,6 +117,7 @@ const styles = StyleSheet.create({
     // alignItems:"center",
     bottom: 0,
     position: 'absolute',
+    // justifyContent:"space-around"
   },
   iconStyle: {
     height: 22,
