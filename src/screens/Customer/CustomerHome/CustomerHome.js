@@ -19,21 +19,33 @@ import { CustomerTabBar } from '../../../components/CustomerTab/CustomerTab'
 import ActionSheet, { SheetManager } from 'react-native-actions-sheet'
 
 const CustomerHome = ({ navigation }) => {
-  const [select, setSelect] = useState()
+  const [select, setSelect] = useState(true)
   const actionSheetRef = createRef()
+  const actionSheetRefService = createRef()
 
   const openSheet = () => {
-    setSelect(!select)
+    setSelect(true)
     actionSheetRef.current?.show()
   }
-  const moveTo = () => {
+
+  const openSheetService = () => {
+    setSelect(false)
+    actionSheetRefService.current?.show()
+  }
+  const moveToBuy = () => {
     navigation.navigate('CustomerProducts')
     actionSheetRef.current?.hide()
   }
-const services = () => {
-  setSelect(!select)
-  navigation.navigate('CustomerServices')
-}
+
+  const moveToSell = () => {
+    navigation.navigate('CustomerCreateProduct')
+    actionSheetRef.current?.hide()
+  }
+
+  const moveToBuyService = () => {
+    navigation.navigate('CustomerServices')
+    actionSheetRefService.current?.hide()
+  }
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
@@ -67,7 +79,7 @@ const services = () => {
               ref={actionSheetRef}>
               <View style={{ marginTop: 15 }}>
                 <TouchableOpacity
-                  onPress={() => moveTo()}
+                  onPress={() => moveToBuy()}
                   activeOpacity={0.8}
                   style={styles.mapContainer}>
                   <View style={styles.innerStylesheet}>
@@ -108,9 +120,7 @@ const services = () => {
           <TouchableOpacity
             activeOpacity={1}
             style={select ? styles.button : styles.button1}
-            onPress={() => services()}
-            // onPress={() => setSelect(!select)}
-            >
+            onPress={() => openSheetService()}>
             <Image
               style={
                 select
@@ -120,6 +130,50 @@ const services = () => {
               source={Images.Pictures.wrench}
             />
             <Text style={select ? styles.test : styles.test1}>Services</Text>
+
+            <ActionSheet
+              containerStyle={styles.actionContainer}
+              defaultOverlayOpacity={0.6}
+              ref={actionSheetRefService}>
+              <View style={{ marginTop: 15 }}>
+                <TouchableOpacity
+                  onPress={() => moveToBuyService()}
+                  activeOpacity={0.8}
+                  style={styles.mapContainer}>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.stylesheetimgs}
+                      source={Images.Pictures.imgss}
+                    />
+                    <Text style={styles.sheetText}>Buy</Text>
+                  </View>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.rightArrow}
+                      source={Images.Pictures.rightArrow}
+                    />
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('PurchaseHistory')}
+                  activeOpacity={0.8}
+                  style={styles.mapContainer}>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.stylesheetimgs}
+                      source={Images.Pictures.box}
+                    />
+                    <Text style={styles.sheetText}>Sell</Text>
+                  </View>
+                  <View style={styles.innerStylesheet}>
+                    <Image
+                      style={styles.rightArrow}
+                      source={Images.Pictures.rightArrow}
+                    />
+                  </View>
+                </TouchableOpacity>
+              </View>
+            </ActionSheet>
           </TouchableOpacity>
         </View>
         <CustomerTabBar navigation={navigation} active="home" />
