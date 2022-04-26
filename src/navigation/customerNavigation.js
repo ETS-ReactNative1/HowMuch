@@ -22,6 +22,8 @@ import CustomerSearch from '../screens/Customer/CustomerSearch/CustomerSearch'
 import CustomerSearchFilter from '../screens/Customer/CustomerSearchFilter/CustomerSearchFilter'
 import CustomerLocation from '../screens/Customer/CustomerLocation/CustomerLocation'
 import { CustomerNotification } from '../screens/Customer/CustomerNotification/CustomerNotification'
+import { VideoCallScreen } from '../screens/Customer/VideoCallScreen/VideoCallScreen'
+import { AudioCallScreen } from '../screens/Customer/AudioCallScreen/AudioCallScreen'
 import CustomerIntersted from '../screens/Customer/CustomerIntersted/CustomerIntersted'
 import PurchaseHistory from '../screens/Customer/CustomerPurchaseHistory/CustomerPurchaseHistory'
 const CustomerAuthStack = createStackNavigator()
@@ -120,6 +122,14 @@ export function CustomeAppStack() {
       <CustomerApp.Screen
         name="CustomerIntersted"
         component={CustomerIntersted}
+      />
+      <CustomerApp.Screen
+        name="VideoCallScreen"
+        component={VideoCallScreen}
+      />
+      <CustomerApp.Screen
+        name="AudioCallScreen"
+        component={AudioCallScreen}
       />
       <CustomerApp.Screen name="PurchaseHistory" component={PurchaseHistory} />
     </CustomerApp.Navigator>
