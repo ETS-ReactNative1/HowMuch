@@ -6,7 +6,7 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-  ScrollView,
+  ScrollView
 } from 'react-native'
 import { Header } from '../../../components/Header/Header'
 import { Images } from '../../../utils/Images'
@@ -32,7 +32,7 @@ const PersonalData = [
   {
     titleText: 'Phone Number',
     infoText: '+971 1234123'
-  }, 
+  }
 ]
 
 export const Profile = ({ navigation }) => {
@@ -104,7 +104,7 @@ export const Profile = ({ navigation }) => {
             </View>
           </View>
         </ScrollView>
-        <CustomerTabBar navigation={navigation} active="Feeds" />
+        <CustomerTabBar navigation={navigation} active="Profile" />
       </View>
     </>
   )
@@ -210,5 +210,4 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: 'rgba(146, 146, 148, .3)'
   }
-
 })

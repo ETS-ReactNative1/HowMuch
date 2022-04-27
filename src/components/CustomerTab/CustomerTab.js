@@ -16,24 +16,23 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
       icon: Images.Pictures.homeIcon,
       navigateTo: 'CustomerHome',
       style: {},
-      text:"Home"
+      text: 'Home'
     },
     {
       name: 'Feeds',
       icon: Images.Pictures.category,
       navigateTo: 'CustomerFeeds',
       style: {},
-      text:"Feeds"
+      text: 'Feeds'
     },
     {
       name: 'search',
       icon: Images.Pictures.plus,
       navigateTo: 'CreatePost',
       style: {
-        width:68,
-        height:68,
-        marginLeft:6
-        
+        width: 68,
+        height: 68,
+        marginLeft: 6
       }
     },
     {
@@ -44,7 +43,7 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
         width: 22,
         height: 22
       },
-      text:"Messages"
+      text: 'Messages'
     },
     {
       name: 'profile',
@@ -52,9 +51,9 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
       navigateTo: 'Profile',
       style: {
         width: 22,
-        height: 22,
+        height: 22
       },
-      text:"Profile"
+      text: 'Profile'
     }
   ]
 
@@ -67,14 +66,12 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
               activeOpacity={1}
               onPress={() => {
                 item.navigateTo && navigation.navigate(item.navigateTo)
-              }}
-              
-              >
+              }}>
               <Image
                 source={item.icon}
                 style={[styles.iconStyle, item.style]}
               />
-                 <Text style={{textAlign:"center"}}>{item.text}</Text>
+              <Text style={{ textAlign: 'center' }}>{item.text}</Text>
             </TouchableOpacity>
           )
         } else {
@@ -84,7 +81,7 @@ export const CustomerTabBar = ({ active = '', navigation }) => {
               onPress={() => {
                 item.navigateTo && navigation.navigate(item.navigateTo)
               }}
-              style={{ justifyContent: 'space-between', padding: 0}}>
+              style={{ justifyContent: 'space-between', padding: 0 }}>
               <Image
                 source={item.icon}
                 style={[styles.iconStyle1, item.style]}
@@ -110,32 +107,32 @@ const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
     width: width,
-    height:76,
-    backgroundColor:"#ffffff",
+    height: 76,
+    backgroundColor: '#ffffff',
     flexDirection: 'row',
-    justifyContent: "space-evenly",
+    justifyContent: 'space-evenly',
     // alignItems:"center",
     bottom: 0,
-    position: 'absolute',
+    position: 'absolute'
     // justifyContent:"space-around"
   },
   iconStyle: {
     height: 22,
     width: 22,
     marginVertical: 10,
-    alignSelf:"center"
+    alignSelf: 'center'
     // tintColor:"#0888FF"
   },
-  text:{
-    color:"#0888FF",
-    paddingBottom:15,
-    textAlign:"center"
+  text: {
+    color: '#0888FF',
+    paddingBottom: 15,
+    textAlign: 'center'
   },
   iconStyle1: {
     height: 22,
     width: 22,
     marginVertical: 10,
-     tintColor:"#0888FF",
-     alignSelf:"center"
-  },
+    tintColor: '#0888FF',
+    alignSelf: 'center'
+  }
 })
