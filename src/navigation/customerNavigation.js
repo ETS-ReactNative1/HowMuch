@@ -26,6 +26,7 @@ import { VideoCallScreen } from '../screens/Customer/VideoCallScreen/VideoCallSc
 import { AudioCallScreen } from '../screens/Customer/AudioCallScreen/AudioCallScreen'
 import CustomerIntersted from '../screens/Customer/CustomerIntersted/CustomerIntersted'
 import PurchaseHistory from '../screens/Customer/CustomerPurchaseHistory/CustomerPurchaseHistory'
+import CustomerSubmitReview from '../screens/Customer/CustomerSubmitReview/CustomerSubmitReview'
 const CustomerAuthStack = createStackNavigator()
 const CustomerApp = createStackNavigator()
 
@@ -103,35 +104,30 @@ export function CustomeAppStack() {
         component={CustomerProductDetails}
       />
       <CustomerApp.Screen name="ServicesDetail" component={ServicesDetail} />
+      <CustomerApp.Screen name="CustomerSearch" component={CustomerSearch} />
       <CustomerApp.Screen
-        name="CustomerSearch"
-        component={CustomerSearch}
-      />
-          <CustomerApp.Screen
         name="CustomerSearchFilter"
         component={CustomerSearchFilter}
       />
-            <CustomerApp.Screen
+      <CustomerApp.Screen
         name="CustomerLocation"
         component={CustomerLocation}
       />
       <CustomerApp.Screen
-       name="CustomerNotification"
-       component={CustomerNotification}
+        name="CustomerNotification"
+        component={CustomerNotification}
       />
       <CustomerApp.Screen
         name="CustomerIntersted"
         component={CustomerIntersted}
       />
-      <CustomerApp.Screen
-        name="VideoCallScreen"
-        component={VideoCallScreen}
-      />
-      <CustomerApp.Screen
-        name="AudioCallScreen"
-        component={AudioCallScreen}
-      />
+      <CustomerApp.Screen name="VideoCallScreen" component={VideoCallScreen} />
+      <CustomerApp.Screen name="AudioCallScreen" component={AudioCallScreen} />
       <CustomerApp.Screen name="PurchaseHistory" component={PurchaseHistory} />
+      <CustomerApp.Screen
+        name="CustomerSubmitReview"
+        component={CustomerSubmitReview}
+      />
     </CustomerApp.Navigator>
   )
 }

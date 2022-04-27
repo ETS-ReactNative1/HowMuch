@@ -70,6 +70,7 @@ const PurchaseHistory = ({ navigation }) => {
             renderItem={({ item }) => {
               return (
                 <Card
+                  onBtnPress={() => navigation.navigate('CustomerSubmitReview')}
                   TagVisible={true}
                   bidBtnVisible={item.bidBtnVisible}
                   howMushView={true}

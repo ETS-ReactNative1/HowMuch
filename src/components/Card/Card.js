@@ -19,6 +19,7 @@ import { useIsFocused, useNavigation } from '@react-navigation/native'
 
 export const Card = ({
   onPress = () => {},
+  onBtnPress = () => {},
   profile = ' Liza Ashlay',
   profileImg = Images.Pictures.girl,
   product = Images.Pictures.services,
@@ -129,9 +130,11 @@ export const Card = ({
           </Text>
         </View>
         {bidBtnVisible && (
-          <View style={styles.btn}>
-            <Text style={{ color: '#fff', fontSize: 12 }}>{bidbtnTitle}</Text>
-          </View>
+          <TouchableOpacity onPress={onBtnPress} activeOpacity={0.9}>
+            <View style={styles.btn}>
+              <Text style={{ color: '#fff', fontSize: 12 }}>{bidbtnTitle}</Text>
+            </View>
+          </TouchableOpacity>
         )}
       </View>
       <View
